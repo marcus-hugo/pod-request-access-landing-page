@@ -19,3 +19,8 @@
     padding: 0;
     border: 0;
 }
+
+body {
+    min-width: 374px;
+    height: 100vh;
+}
