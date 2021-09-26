@@ -1,0 +1,143 @@
+
+/*  Custom Properties */
+
+:root {
+    --green-bright: #54E6AF;
+    --green-light: #B3FFE2;
+    
+    --near-black: #121725;
+    --dark-blueish-grey: #2C344B;
+    --blueish-grey: #5A668A;
+    --medium-grey: #C2CBE5;
+    --white: #FFFFFF;
+}
+
+/* Resets */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 375px;
+    height: 100vh;
+    position: relative;
+    font-family: 'Chivo', sans-serif;
+    text-align: center;
+    background-image: url("/Users/marcushugo/Documents/Web Development/Frontend Mentor Challenges/pod-request-access-landing-page/assets/mobile/image-host.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--near-black);
+    background-blend-mode: overlay;
+}
+
+.logo {
+    margin-bottom: ;
+    width: 96px;
+    height: 40px;
+    position: relative;
+    top: 62px;
+}
+
+main {
+    margin: 103px 24px 94px 24px;
+}
+
+h1 {
+    color: var(--green-bright);
+    text-transform: uppercase;
+    font-size: 26px;
+    margin-bottom: 10px;
+    line-height: 38px;
+}
+
+span {
+    color: var(--white);
+}
+
+p {
+    color: var(--medium-grey);
+    margin-bottom: 33px;
+    font-size: 15px;
+    line-height: 25px;
+}
+
+.logos-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 48px;
+}
+
+.logos {
+    width: 20%;
+    height: 20%;
+    
+}
+
+input {
+    height: 46px;
+    width: 327px;
+    background-color: var(--dark-blueish-grey);
+    color: var(--white);
+    border-radius: 28px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    padding-left: 35px;;
+}
+
+button {
+    height: 46px;
+    width: 327px;
+    background-color: var(--green-bright);
+    color: var(--dark-blueish-grey);
+    border-radius: 28px;
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    body {
+        /* background-image: url("/Users/marcushugo/Documents/Web Development/Frontend Mentor Challenges/pod-request-access-landing-page/assets/mobile/image-host.jpg");
+        background-size: 491px 767px;
+        background-position: 277px 60px;
+        background-blend-mode: initial; */
+        background-image: none;
+        text-align: left;
+    }
+
+    .logo {
+        width: 135px;
+        height: 56px;
+        top: ;
+        left: ;
+    }
+
+    main {
+        background-color: var(--near-black);
+        width: 635px;
+        height: 509px;
+        margin: 258px 94px 257px 39px;
+        position: relative;
+        bottom: 60px;
+    }
+
+    h1 {
+        font-size: 48px;
+        line-height: 56px;
+        padding-top: 93px;
+        margin-bottom: 30px;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .logos {
+        display: none;
+    }
+}
+

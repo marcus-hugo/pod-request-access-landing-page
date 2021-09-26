@@ -1,34 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@300&display=swap" rel="stylesheet">
+  <!-- Style Link -->
   <link rel="stylesheet" href="styles/style.css">
   <title>Frontend Mentor | Pod request access landing page</title>
 </head>
+
 <body>
+  <img class="logo" src="assets/desktop/logo.svg" alt="">
+
   <main>
-    <img src="assets/desktop/logo.svg" alt="">
-    <h1>Publish your podcasts everywhere.</h1>
+    <h1>Publish your podcasts <span>everywhere.</span></h1>
 
-    <p> Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify, 
-        Apple Podcasts, Google Podcasts, Pocket Casts and more!</p>
-    <div>
-      <img src="assets/desktop/spotify.svg" alt="">
-      <img src="assets/desktop/apple-podcast.svg" alt="">
-      <img src="assets/desktop/google-podcasts.svg" alt="">
-      <img src="assets/desktop/pocket-casts.svg" alt="">
+    <p> Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify,
+      Apple Podcasts, Google Podcasts, Pocket Casts and more!</p>
+    <div class="logos-container">
+      <img class="logos" src="assets/desktop/spotify.svg" alt="">
+      <img class="logos" src="assets/desktop/apple-podcast.svg" alt="">
+      <img class="logos" src="assets/desktop/google-podcasts.svg" alt="">
+      <img class="logos" src="assets/desktop/pocket-casts.svg" alt="">
     </div>
-    <form action="">
-      <input type="email" id="email" name="email">
-      <label for="email"></label>
 
+    <form action="">
+      <input type="email" id="email" name="email" placeholder="Email Address" required>
+      <label for="email"></label>
       <button type="submit">Request access</button>
     </form>
-    
+
   </main>
   <script src="app/app.js"></script>
 </body>
+
 </html>
