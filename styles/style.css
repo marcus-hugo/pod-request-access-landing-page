@@ -24,14 +24,13 @@
 body {
     min-width: 375px;
     height: 100vh;
-    position: relative;
     font-family: 'Chivo', sans-serif;
     text-align: center;
-    background-image: url("/Users/marcushugo/Documents/Web Development/Frontend Mentor Challenges/pod-request-access-landing-page/assets/mobile/image-host.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
     background-color: var(--near-black);
-    background-blend-mode: overlay;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
 }
 
 .logo {
@@ -40,6 +39,20 @@ body {
     height: 40px;
     position: relative;
     top: 62px;
+}
+
+.host-image-mobile {
+    z-index: -1;
+    position: absolute;
+    filter: opacity(20%);
+}
+
+.host-image-tablet {
+    display: none;
+}
+
+.host-image-desktop {
+    display: none;
 }
 
 main {
@@ -65,17 +78,39 @@ p {
     line-height: 25px;
 }
 
-.logos-container {
+.podcast-logos-container {
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin-bottom: 48px;
 }
 
-.logos {
-    width: 20%;
-    height: 20%;
-    
+.logo-spotify-podcasts {
+    width: 56px;
+    height: 17px;
+    margin: 0 24px 0 0;
+}
+
+.logo-apple-podcasts {
+    width: 46px;
+    height: 17px;
+    margin: 0 23px 0 0;
+}
+
+.logo-google-podcasts {
+    width: 73px;
+    height: 11px;
+    margin: 0 16px 0 0;
+}
+
+.logo-pocket-casts-podcasts {
+    width: 75.88px;
+    height: 14.9px;
+    margin: 0 14.9px 0 0;
+}
+
+.logos-fill {
+    fill: var(--dark-blueish-grey);
 }
 
 input {
@@ -98,28 +133,46 @@ button {
     font-size: 14px;
 }
 
+.podcast-logos-container-wideview {
+    display: none;
+}
+
+.dots-pattern {
+    display: none;
+}
+
+/* Tablet View */
 @media (min-width: 768px) {
     body {
-        /* background-image: url("/Users/marcushugo/Documents/Web Development/Frontend Mentor Challenges/pod-request-access-landing-page/assets/mobile/image-host.jpg");
-        background-size: 491px 767px;
-        background-position: 277px 60px;
-        background-blend-mode: initial; */
-        background-image: none;
         text-align: left;
     }
 
     .logo {
         width: 135px;
         height: 56px;
-        top: ;
-        left: ;
+        top: 50px;
+        left: 50px;
+    }
+
+/* Used display: block; to show the image, z-inex: -1; to move the image behind the main 
+tag, and position: absolute; to image out of the document flow. */
+    .host-image-mobile {
+        display: none;
+    }
+
+    .host-image-tablet {
+        display: block;
+        position: absolute; 
+        left: 277px;
+        bottom: 257px;
+        z-index: -1;
     }
 
     main {
         background-color: var(--near-black);
         width: 635px;
         height: 509px;
-        margin: 258px 94px 257px 39px;
+        margin: 258px 94px 0 39px;
         position: relative;
         bottom: 60px;
     }
@@ -134,10 +187,90 @@ button {
     p {
         font-size: 18px;
         line-height: 28px;
+        margin-right: 180px;
     }
 
-    .logos {
+    .podcast-logos-container {
         display: none;
     }
-}
 
+    input {
+        width: 427px;
+        height: 56px;
+    }
+
+    button {
+        width: 162px;
+        height: 46px;
+        position: relative;
+        right: 170px;
+    }
+
+    .podcast-logos-container-wideview {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+   
+    .logo-spotify-podcasts {
+        width: 96px;
+        height: 29px;
+        margin: 64px 40px 0 0;
+    }
+
+    .logo-apple-podcasts {
+        width: 78px;
+        height: 29px;
+        margin: 64px 41px 0 0;
+    }
+
+    .logo-google-podcasts {
+        width: 125px;
+        height: 18px;
+        margin: 64px 27px 0 0;
+    }
+
+    .logo-pocket-casts-podcasts {
+        width: 129px;
+        height: 26px;
+        margin: 64px 99px 0 0;
+    }
+
+    .dots-pattern {
+        display: inline;
+        margin-left: 39px;
+        margin-top: 90px;
+    }
+} 
+
+@media (min-width: 1024px) {
+    body {
+        max-width: 1440px;
+    }
+
+    .desktop-wrapper {
+        height: 640px;
+        width: 1275px;
+    }
+
+    .host-image-mobile {
+       display: none;
+    }
+    
+    .host-image-tablet {
+        display: none;
+    }
+    
+    .host-image-desktop {
+        display: inline;
+        z-index: -1;
+        position: absolute;
+        top: 130px;
+        right: 0;
+    }
+
+    main {
+        width: 723px;
+        height: 509px;
+    }
+}
