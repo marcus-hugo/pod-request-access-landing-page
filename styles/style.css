@@ -125,6 +125,22 @@ input {
     line-height: 28px;
     color: #FFFFFF;
     padding-left: 32px;
+    opacity: 0.5;
+}
+
+/* when error is hidden */
+small {
+    font-size: 12px;
+    color: #FB3E3E;
+    position: relative;
+    bottom: 10px;
+    left: 57px;
+    visibility: hidden;
+}
+
+/* when error is shown */
+.error small {
+    visibility: visible;
 }
 
 button {
@@ -136,6 +152,11 @@ button {
     font-size: 14px;
     color: #121725;
     line-height: 28px;
+}
+
+button:hover {
+    background-color:var(--green-light);
+    cursor: pointer;
 }
 
 .pattern-dots {
@@ -223,6 +244,12 @@ button {
         margin: 0 0 0 24px;
     }
 
+    small {
+        bottom: -8px;
+        left: 57px;
+        visibility: hidden;
+    }
+
     button {
         position: absolute;
         top: 625px;
@@ -276,10 +303,11 @@ button {
         padding-right: 44px;
         margin-top: 37px;
     }
+    
 
     button {
         position:relative;
-        top: -51px;
+        top: -67px;
         left: 259px;
     }
 
