@@ -128,6 +128,10 @@ input {
     opacity: 0.5;
 }
 
+input:focus {
+    opacity: 100%;
+}
+
 /* when error is hidden */
 small {
     font-size: 12px;
@@ -307,7 +311,7 @@ button:hover {
 
     button {
         position:relative;
-        top: -67px;
+        top: -65px;
         left: 259px;
     }
 
