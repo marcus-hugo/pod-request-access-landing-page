@@ -50,7 +50,7 @@ Users should be able to:
 ### What I learned
 Many great takeaways with this project!  How to navigate a Sketh file to find CSS styles. How to plan out HTML and CSS for 3 different layouts, had to rework the the solution a few times and really see the difference between using ```position:abosolute``` and ```position:relative```.  It seems elements start moving around when set to ```position:absolute```, I guess being removed from the document flow?  Learned a little bit of Markdown language too.
 
-How to validate a form with javaScript.  What stumped me the most was how to get the boolean value fromt the Regex to compare it to the email ```<input>```.  What ended up working was passing in the ```emailValue``` instead of ```email``` into the Regex, which at this time I don't fully understand, I would think they both contain strings? Also added a success message!
+How to validate a form with javaScript.  What stumped me the most was how to get the boolean value from the Regex to compare it to the email ```<input>```.  What ended up working was passing in the ```emailValue``` instead of ```email``` into the Regex, which at this time I don't fully understand, I would think they both contain strings?  Maybe different types?  Also added a success message!
 
 ```js
 
