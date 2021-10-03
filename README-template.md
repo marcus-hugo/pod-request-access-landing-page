@@ -31,12 +31,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./screenshot.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/marcus-hugo/pod-request-access-landing-page](https://your-solution-url.com)
+- Live Site URL: [https://marcus-hugo.github.io/pod-request-access-landing-page/](https://your-live-site-url.com)
 
 ## My process
 
@@ -48,29 +48,33 @@ Users should be able to:
 - Mobile-first workflow
 
 ### What I learned
+Many great takeaways with this project!  How to navigate a Sketh file to find CSS styles. How to plan out HTML and CSS for 3 different layouts, had to rework the the solution a few times and really see the difference between using ```position:abosolute``` and ```position:relative```  It seems elements start moving around when set to ```position:absolute```, I guess being removed the the document flow?
 
+How to validate a form with javaScript.  What stumped me the most was why how to get the boolean value fromt the Regex to compare to the email ```<input>```.  What ended up working was passing in the ```emailValue``` instead of ```email``` into the Regex, which at this time I don't fully understand, I would think they both contain strings?
 
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+
+function checkEmailValue() {
+    const emailValue = email.value;
+    const small = document.querySelector('small');
+    let result = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(emailValue);
+    
+    if (emailValue === '') {
+        message('Opps! Please add your email');
+        form.classList = 'error';
+    } else if (result === false) {
+        message('Opps! Please provide a valid email');
+        form.classList = 'error';
+    } else if (result === true) {
+        message('Success!');
+        form.classList = 'error';
+    }
 }
 ```
+
 ### Continued development
 
-
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+learning and practicing JavaScript and adding it to future projects.
 
 ### Useful resources
 
@@ -79,7 +83,7 @@ const proudOfThisFunc = () => {
 ## Author
 
 - Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@marcus-hugo](https://www.frontendmentor.io/profile/yourusername)
 
 ## Acknowledgments
 
